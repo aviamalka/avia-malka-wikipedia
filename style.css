@@ -1,0 +1,189 @@
+/* Basic Reset & Body Style */
+body {
+    font-family: sans-serif;
+    background-color: #f8f9fa; /* Light gray background like Wikipedia */
+    color: #202122; /* Standard text color */
+    margin: 0;
+    padding: 1em;
+    line-height: 1.6;
+}
+
+/* Main Content Area */
+#content {
+    background-color: #ffffff; /* White content background */
+    border: 1px solid #a7d7f9; /* Light blue border */
+    padding: 1.5em 2em;
+    max-width: 960px; /* Limit width for readability */
+    margin: 1em auto; /* Center the content area */
+    border-radius: 4px;
+}
+
+/* Headings */
+h1#firstHeading {
+    font-family: 'Linux Libertine', Georgia, Times, serif; /* Wikipedia's typical title font */
+    font-size: 2em;
+    margin-bottom: 0.25em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid #a2a9b1; /* Light gray underline */
+    font-weight: normal;
+}
+
+h2 {
+    font-family: 'Linux Libertine', Georgia, Times, serif;
+    font-size: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 0.25em;
+    padding-bottom: 0.1em;
+    border-bottom: 1px solid #a2a9b1;
+    font-weight: normal;
+}
+
+h3 {
+    font-family: sans-serif; /* Subheadings often sans-serif */
+    font-size: 1.2em;
+    margin-top: 0.8em;
+    margin-bottom: 0.2em;
+    font-weight: bold;
+}
+
+/* Subtitles */
+#siteSub {
+    display: block;
+    font-size: 0.8em;
+    color: #54595d; /* Grayish color */
+    margin-bottom: 1em;
+}
+
+#contentSub {
+    font-size: 0.8em;
+    color: #54595d;
+    margin: 0 0 1.4em 0;
+    padding: 0;
+}
+
+/* Paragraphs */
+p {
+    margin: 0.5em 0;
+}
+
+b {
+    font-weight: bold;
+}
+
+i {
+    font-style: italic;
+}
+
+/* Links (Placeholder Style) */
+a {
+    color: #0645ad; /* Standard Wikipedia blue */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+     /* color: #0b0080; */ /* Optional: Visited link color */
+}
+
+/* Image Placeholder Box */
+.infobox-image {
+    float: right;
+    margin: 0.5em 0 1em 1.5em;
+    border: 1px solid #a2a9b1; /* Gray border */
+    padding: 5px;
+    background-color: #f8f9fa; /* Light background for the box */
+    text-align: center;
+}
+
+.infobox-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Table of Contents */
+#toc {
+    border: 1px solid #a2a9b1;
+    background-color: #f8f9fa;
+    padding: 0.8em;
+    margin: 1em 0 1em 0;
+    display: table; /* Prevents text wrapping around it like float */
+    font-size: 0.9em;
+    max-width: 400px; /* Optional: limit width */
+}
+
+#toc #toctitle h2 {
+    font-family: sans-serif;
+    font-size: 1.1em;
+    text-align: center;
+    margin: 0 0 0.5em 0;
+    padding: 0;
+    border-bottom: none;
+    font-weight: bold;
+}
+
+#toc ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+#toc ul ul {
+    padding-left: 2em; /* Indent sub-items */
+    margin-top: 0.3em;
+}
+
+#toc li {
+    margin-bottom: 0.3em;
+}
+
+.tocnumber {
+    display: inline-block; /* Adjust spacing if needed */
+    margin-right: 0.5em;
+}
+
+/* Horizontal Rule */
+hr {
+    border: none;
+    border-top: 1px solid #a2a9b1;
+    margin: 0.2em 0; /* Tighter margin below H2 */
+}
+
+/* Clearfix for floats */
+.visualClear {
+    clear: both;
+}
+
+/* Ensure body content respects floats */
+#bodyContent {
+    overflow: auto; /* Contains floats like the image box */
+}
+
+/* Media Query for smaller screens (Optional) */
+@media (max-width: 720px) {
+    #content {
+        padding: 1em;
+        margin: 0.5em;
+    }
+
+    h1#firstHeading {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    .infobox-image {
+        float: none; /* Stack image on small screens */
+        margin: 1em auto;
+        max-width: 80%;
+    }
+
+     #toc {
+        max-width: none; /* Allow ToC to take full width */
+     }
+}
